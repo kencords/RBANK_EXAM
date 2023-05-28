@@ -15,7 +15,7 @@ public class ProjectPlanService {
     public void startScheduleApp() {
         int mainChoice = 0;
 
-        while (mainChoice != 8) {
+        while (mainChoice != 7) {
             System.out.println("---------PROJECT PLAN SCHEDULER---------");
             System.out.println("1. Add Project");
             System.out.println("2. Add Main Task");
