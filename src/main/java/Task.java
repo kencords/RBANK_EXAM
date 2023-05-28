@@ -57,6 +57,6 @@ public class Task {
     public String toString() {
         String start = this.startDate != null ? this.startDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) : "";
         String end = this.endDate != null ? this.endDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) : "";
-        return "main.java.Task Name: <" + this.name + "> Duration: <" + this.duration + " hours> Start Date: <" + start + "> End Date: <" + end + ">";
+        return "Task Name: <" + this.name + "> Duration: <" + this.duration + " hours> Start Date: <" + start + "> End Date: <" + end + ">";
     }
 }

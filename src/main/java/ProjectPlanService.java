@@ -44,10 +44,9 @@ public class ProjectPlanService {
                     startDate = LocalDateTime.now();
                     generateSchedule(projectPlan, projectPlan.getMainTask());
                     List<Task> subTasks = projectPlan.getMainTask().getSubTasks();
-                    Schedule schedule = new Schedule(LocalDateTime.now(), LocalDateTime.now());
+                    Schedule schedule = new Schedule(LocalDateTime.now().minusDays(1), LocalDateTime.now().minusDays(1));
                     for (Task task : subTasks) {
-                        if (task.getStartDate().isAfter(schedule.getStartDate())) {
-                            schedule.setStartDate(task.getStartDate());
+                        if (task.getEndDate().isAfter(schedule.getEndDate())) {
                             schedule.setEndDate(task.getEndDate());
                         }
                     }
